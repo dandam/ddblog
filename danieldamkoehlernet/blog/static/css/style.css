@@ -1,3 +1,4 @@
+/*
 body {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
@@ -27,8 +28,8 @@ body {
 }
 
 
-/* Index pg - list of posts */
+!* Index pg - list of posts *!
 
 .card {
     box-shadow: 0 16px 48px #E3E7EB;
-}
+}*/

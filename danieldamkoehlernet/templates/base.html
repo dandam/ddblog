@@ -1,21 +1,33 @@
+{% load static %}
+{% load static tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
-
-{% load static %}
-
-    <head>
-        <title>Daniel Damkoehler dot net</title>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-        <meta name="google" content="notranslate" />
+	<head>
+		<title>Daniel Damkoehler dot net</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            crossorigin="anonymous" />
-    </head>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		{% tailwind_css %}
+	</head>
 
-    <body>
-        <!-- Navigation -->
+	<body class="bg-slate-300 font-sans leading-normal tracking-normal">
+		<div class="container w-full bg-blue-300 h-12 grid grid-cols-2 gap-2">
+			<div class="items-center"><h1>Daniel Damkoehler</h1></div>
+			<div class="items-center">
+				<nav>
+					<div>
+						<p>Navigation will go here.</p>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="container mx-auto">
+			<section class="flex">
+				{% block content %}
+        		<!-- Content Goes here -->
+        		{% endblock content %}
+			</section>
+			<!--        &lt;!&ndash; Navigation &ndash;&gt;
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">daniel damkoehler</a>
@@ -37,13 +49,12 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
+        </nav>-->
+		</div>
+
         <!-- Footer -->
         <footer class="py-3 bg-grey">
             <p class="m-0 text-dark text-center ">Copyright &copy; Daniel Damkoehler</p>
         </footer>
-    </body>
+	</body>
 </html>
